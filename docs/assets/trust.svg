@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" width="1000" height="470" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">How Ask-AI stays truthful</title>
+<desc id="d">A question is first checked for answerability, then answered from a trusted, computed context. An optional LLM narrates, and a sanitizer removes any number not in the context, plus SQL, URLs and secrets. Hard rules are enforced in code.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6472"/></marker></defs>
+<rect x="0.5" y="0.5" width="999" height="469" rx="16" fill="#ffffff" stroke="#d9dee5"/>
+<text x="40.0" y="50.0" font-size="16" font-weight="700" fill="#1b1f2a" text-anchor="start">How Ask-AI stays truthful</text>
+<rect x="40.0" y="82.0" width="142.0" height="70.0" rx="10" fill="#ffffff" stroke="#2f5bd3" stroke-width="1.5"/>
+<text x="111.0" y="114.0" font-size="14.5" font-weight="700" fill="#1b1f2a" text-anchor="middle">Question</text>
+<text x="111.0" y="133.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">plain English</text>
+<line x1="183.0" y1="117.0" x2="195.0" y2="117.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="196.0" y="82.0" width="142.0" height="70.0" rx="10" fill="#fdf0d5" stroke="#a15c07" stroke-width="1.5"/>
+<text x="267.0" y="114.0" font-size="14.5" font-weight="700" fill="#1b1f2a" text-anchor="middle">Can we answer?</text>
+<text x="267.0" y="133.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">answerability check</text>
+<line x1="339.0" y1="117.0" x2="351.0" y2="117.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="352.0" y="82.0" width="142.0" height="70.0" rx="10" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="423.0" y="114.0" font-size="14.5" font-weight="700" fill="#1b1f2a" text-anchor="middle">Trusted context</text>
+<text x="423.0" y="133.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">computed metrics only</text>
+<line x1="495.0" y1="117.0" x2="507.0" y2="117.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="508.0" y="82.0" width="142.0" height="70.0" rx="10" fill="#efe8fd" stroke="#6d3fd6" stroke-width="1.5"/>
+<text x="579.0" y="114.0" font-size="14.5" font-weight="700" fill="#1b1f2a" text-anchor="middle">LLM narrates</text>
+<text x="579.0" y="133.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">optional</text>
+<line x1="651.0" y1="117.0" x2="663.0" y2="117.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="664.0" y="82.0" width="142.0" height="70.0" rx="10" fill="#fdf0d5" stroke="#a15c07" stroke-width="1.5"/>
+<text x="735.0" y="114.0" font-size="14.5" font-weight="700" fill="#1b1f2a" text-anchor="middle">Sanitizer</text>
+<text x="735.0" y="133.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">verify every number</text>
+<line x1="807.0" y1="117.0" x2="819.0" y2="117.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="820.0" y="82.0" width="142.0" height="70.0" rx="10" fill="#e3eafc" stroke="#2f5bd3" stroke-width="1.5"/>
+<text x="891.0" y="114.0" font-size="14.5" font-weight="700" fill="#1b1f2a" text-anchor="middle">Answer</text>
+<text x="891.0" y="133.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">+ evidence, limits</text>
+<line x1="267.0" y1="154.0" x2="267.0" y2="214.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="166.0" y="216.0" width="202.0" height="62.0" rx="10" fill="#fde8e6" stroke="#b42318" stroke-width="1.5"/>
+<text x="267.0" y="240.0" font-size="14" font-weight="700" fill="#b42318" text-anchor="middle">Not answerable safely</text>
+<text x="267.0" y="260.0" font-size="12.5" font-weight="400" fill="#1b1f2a" text-anchor="middle">say what's missing instead</text>
+<line x1="735.0" y1="154.0" x2="735.0" y2="214.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="634.0" y="216.0" width="202.0" height="62.0" rx="10" fill="#fde8e6" stroke="#b42318" stroke-width="1.5"/>
+<text x="735.0" y="240.0" font-size="14" font-weight="700" fill="#b42318" text-anchor="middle">Unverified figure removed</text>
+<text x="735.0" y="260.0" font-size="12.5" font-weight="400" fill="#1b1f2a" text-anchor="middle">also SQL, URLs, secrets</text>
+<rect x="40.0" y="312.0" width="920.0" height="128.0" rx="14" fill="#f6f7fb" stroke="#d9dee5" stroke-width="1.5"/>
+<text x="60.0" y="340.0" font-size="13" font-weight="700" fill="#334155" text-anchor="start" letter-spacing="1.2">HARD RULES IN CODE</text>
+<circle cx="66" cy="363" r="5" fill="#0f766e"/>
+<text x="80.0" y="368.0" font-size="14.5" font-weight="400" fill="#1b1f2a" text-anchor="start">Never executes model-generated SQL</text>
+<circle cx="526" cy="363" r="5" fill="#0f766e"/>
+<text x="540.0" y="368.0" font-size="14.5" font-weight="400" fill="#1b1f2a" text-anchor="start">No raw records are sent to the model</text>
+<circle cx="66" cy="389" r="5" fill="#0f766e"/>
+<text x="80.0" y="394.0" font-size="14.5" font-weight="400" fill="#1b1f2a" text-anchor="start">Every number must exist in the computed context</text>
+<circle cx="526" cy="389" r="5" fill="#0f766e"/>
+<text x="540.0" y="394.0" font-size="14.5" font-weight="400" fill="#1b1f2a" text-anchor="start">Forecasts are statistics, never generated text</text>
+<circle cx="66" cy="415" r="5" fill="#0f766e"/>
+<text x="80.0" y="420.0" font-size="14.5" font-weight="400" fill="#1b1f2a" text-anchor="start">Every query is scoped to the user's workspace</text>
+<circle cx="526" cy="415" r="5" fill="#0f766e"/>
+<text x="540.0" y="420.0" font-size="14.5" font-weight="400" fill="#1b1f2a" text-anchor="start">Works with AI switched off (deterministic answers)</text>
+</svg>

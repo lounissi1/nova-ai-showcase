@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" width="1000" height="380" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Agent workflow</title>
+<desc id="d">Discovery, Implementation, Quality, Deployment and Monitoring agents run in order. When the quality gate fails, a Reasoning agent proposes a repair and implementation retries up to three times; otherwise an error handler stops the run and records why.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6472"/></marker></defs>
+<rect x="0.5" y="0.5" width="999" height="379" rx="16" fill="#ffffff" stroke="#d9dee5"/>
+<rect x="40.0" y="92.0" width="160.0" height="72.0" rx="10" fill="#efe8fd" stroke="#6d3fd6" stroke-width="1.5"/>
+<text x="120.0" y="125.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Discovery</text>
+<text x="120.0" y="144.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">understand the request</text>
+<line x1="201.0" y1="128.0" x2="229.0" y2="128.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="230.0" y="92.0" width="160.0" height="72.0" rx="10" fill="#efe8fd" stroke="#6d3fd6" stroke-width="1.5"/>
+<text x="310.0" y="125.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Implementation</text>
+<text x="310.0" y="144.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">build the pipeline</text>
+<line x1="391.0" y1="128.0" x2="419.0" y2="128.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="420.0" y="92.0" width="160.0" height="72.0" rx="10" fill="#fdf0d5" stroke="#a15c07" stroke-width="1.5"/>
+<text x="500.0" y="125.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Quality</text>
+<text x="500.0" y="144.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">validate the output</text>
+<line x1="581.0" y1="128.0" x2="609.0" y2="128.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="610.0" y="92.0" width="160.0" height="72.0" rx="10" fill="#efe8fd" stroke="#6d3fd6" stroke-width="1.5"/>
+<text x="690.0" y="125.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Deployment</text>
+<text x="690.0" y="144.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">release it</text>
+<line x1="771.0" y1="128.0" x2="799.0" y2="128.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="800.0" y="92.0" width="160.0" height="72.0" rx="10" fill="#efe8fd" stroke="#6d3fd6" stroke-width="1.5"/>
+<text x="880.0" y="125.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Monitoring</text>
+<text x="880.0" y="144.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">watch it run</text>
+<text x="595.0" y="86.0" font-size="12.5" font-weight="700" fill="#0f766e" text-anchor="middle">pass</text>
+<text x="40.0" y="50.0" font-size="16" font-weight="700" fill="#1b1f2a" text-anchor="start">Six specialised agents, one quality gate</text>
+<rect x="250.0" y="248.0" width="200.0" height="64.0" rx="10" fill="#efe8fd" stroke="#6d3fd6" stroke-width="1.5"/>
+<text x="350.0" y="277.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Reasoning</text>
+<text x="350.0" y="296.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">propose a repair</text>
+<path d="M500.0,164 V280 H452" fill="none" stroke="#a15c07" stroke-width="1.8" marker-end="url(#a)"/>
+<text x="508.0" y="200.0" font-size="12.5" font-weight="700" fill="#a15c07" text-anchor="start">fail, retries left</text>
+<line x1="290.0" y1="247.0" x2="290.0" y2="166.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="282.0" y="218.0" font-size="12.5" font-weight="700" fill="#6d3fd6" text-anchor="end">try again (max 3)</text>
+<rect x="620.0" y="248.0" width="200.0" height="64.0" rx="10" fill="#fde8e6" stroke="#b42318" stroke-width="1.5"/>
+<text x="720.0" y="277.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Error handler</text>
+<text x="720.0" y="296.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">stop and record why</text>
+<path d="M560,164 V230 H720 V246" fill="none" stroke="#b42318" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#a)"/>
+<text x="728.0" y="224.0" font-size="12.5" font-weight="700" fill="#b42318" text-anchor="start">fail, no retries left</text>
+<text x="40.0" y="350.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">Every stage is persisted and streamed live to the dashboard over WebSocket.</text>
+</svg>
