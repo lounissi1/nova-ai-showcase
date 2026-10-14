@@ -49,3 +49,12 @@ is handled by Clerk with JWT verification on the backend.
 Each development phase ended with a written audit stating what was proven, what was only
 tested locally, and what still needed a live environment. No feature is labelled
 production-proven without evidence.
+
+## 8. Ship through a gated pipeline on managed services
+
+The API runs as a Docker container on Render, the dashboard on Vercel and the database on
+Supabase (managed PostgreSQL). GitHub Actions gates every release: pull requests are linted,
+type-checked and built, and get a Vercel preview; a merge to `main` builds the image, runs
+Alembic migrations and the tests, then deploys. Configuration lives in environment variables,
+and Sentry and UptimeRobot watch production. Managed services kept a small team focused on the
+product instead of servers.

@@ -226,13 +226,49 @@ def trust() -> str:
                "and secrets. Hard rules are enforced in code.")
 
 
+# --------------------------------------------------------------------------- deployment
+def deployment() -> str:
+    W, H = 1000, 470
+    b = t(40, 48, "From commit to production", 16, INK, 700)
+    # source of truth
+    b += node(40, 110, 140, 130, "GitHub", "code · pull requests", SLATE_BG, SLATE)
+    # two CI/CD lanes in GitHub Actions
+    b += t(290, 80, "GITHUB ACTIONS CI/CD", 12.5, SLATE, 700, spacing=1.2)
+    lanes = [(92, "pull request", "Checks", "lint · type-check · build",
+              "Vercel preview", "preview URL posted on the pull request"),
+             (196, "merge to main", "Checks and migrations", "Docker build · Alembic migrations · tests",
+              "Deploy to Render", "backend container, health-checked")]
+    for y, trigger, c_title, c_sub, d_title, d_sub in lanes:
+        start_y = 147 if y < 150 else 203
+        b += arr(182, start_y, 288, y + 32)
+        b += t(236, (start_y + y + 32) / 2 - 8, trigger, 12, MUTED, 600, "middle")
+        b += node(290, y, 270, 64, c_title, c_sub, BAND, SLATE, 14.5)
+        b += arr(562, y + 32, 598, y + 32)
+        b += node(600, y, 360, 64, d_title, d_sub, BLUE_BG, BLUE, 14.5)
+    # production
+    b += box(40, 296, 920, 144, BAND, LINE, rx=14)
+    b += t(60, 322, "PRODUCTION", 12.5, SLATE, 700, spacing=1.2)
+    b += t(940, 322, "managed services, configured by environment variables, no secrets in code", 12.5, MUTED, 400, "end")
+    b += node(60, 342, 220, 74, "Vercel", "Next.js frontend", BLUE_BG, BLUE)
+    b += arr(282, 379, 328, 379, both=True)
+    b += node(330, 342, 230, 74, "Render", "FastAPI API in Docker", BLUE_BG, BLUE)
+    b += arr(562, 379, 608, 379, both=True)
+    b += node(610, 342, 160, 74, "Supabase", "PostgreSQL", AMBER_BG, AMBER)
+    b += node(790, 342, 150, 74, "Monitoring", "Sentry · UptimeRobot", PAPER, SLATE)
+    return svg(W, H, b, "From commit to production",
+               "GitHub Actions runs checks on every pull request and publishes a Vercel preview. On merge to main it "
+               "builds the Docker image, runs Alembic migrations and tests, then deploys the API to Render. "
+               "Production: Next.js on Vercel, FastAPI on Render, PostgreSQL on Supabase, monitored with Sentry "
+               "and UptimeRobot.")
+
+
 # --------------------------------------------------------------------------- evolution
 def evolution() -> str:
     W, H = 1000, 330
     b = t(40, 48, "From idea to platform", 16, INK, 700)
     stages = [
         ("DataFlow AI", "Nov 2025", "The idea", ["Multi-agent pipelines from", "natural-language requirements"], SLATE_BG, SLATE),
-        ("Nova AI", "Nov – Dec 2025", "First product", ["Shopify 'true profit' dashboard,", "LangGraph agents, DB connectors"], BLUE_BG, BLUE),
+        ("Nova AI", "Nov – Dec 2025", "First product", ["Shopify 'true profit' dashboard,", "LangGraph agents, DB connectors,", "deployed: Render · Vercel · Supabase"], BLUE_BG, BLUE),
         ("Nova AI Analytics", "Jun – Jul 2026", "Hardened platform", ["Generic ingestion at scale,", "grounded Ask-AI, forecasting,", "auth, workers, 1,700+ tests"], NOVA_BG, NOVA),
     ]
     w, gap = 280, 40
@@ -249,14 +285,15 @@ def evolution() -> str:
         if i < 2:
             b += arr(x + w + 4, 212, x + w + gap - 4, 212)
     return svg(W, H, b, "From idea to platform",
-               "DataFlow AI (Nov 2025, the idea), Nova AI (Nov–Dec 2025, first product), Nova AI Analytics "
+               "DataFlow AI (Nov 2025, the idea), Nova AI (Nov–Dec 2025, first product, deployed on Render, Vercel "
+               "and Supabase), Nova AI Analytics "
                "(Jun–Jul 2026, hardened platform).")
 
 
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     for name, fn in [("banner", banner), ("architecture", architecture), ("agents", agents),
-                     ("trust", trust), ("evolution", evolution)]:
+                     ("trust", trust), ("deployment", deployment), ("evolution", evolution)]:
         (OUT / f"{name}.svg").write_text(fn(), encoding="utf-8")
     (OUT / "social-preview.svg").write_text(banner(1280, 640), encoding="utf-8")
     print("wrote", sorted(p.name for p in OUT.glob("*.svg")))

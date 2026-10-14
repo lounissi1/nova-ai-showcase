@@ -6,6 +6,9 @@ in this showcase).
 **Stack:** Next.js 16 · React 19 · TypeScript · Tailwind CSS · Radix UI · Recharts · React Flow ·
 Framer Motion · Clerk · next-themes (light and dark).
 
+**Hosting:** Vercel. Every pull request is linted, type-checked and built in GitHub Actions, then
+deployed as a Vercel preview whose URL is posted on the pull request.
+
 **Main screens**
 
 | Area | What it shows |

@@ -7,6 +7,7 @@
   <img alt="Python" src="https://img.shields.io/badge/Python-FastAPI-2f5bd3?style=for-the-badge">
   <img alt="AI" src="https://img.shields.io/badge/AI-LangGraph%20agents-6d3fd6?style=for-the-badge">
   <img alt="Frontend" src="https://img.shields.io/badge/UI-Next.js%2016-1b1f2a?style=for-the-badge">
+  <img alt="Deployed" src="https://img.shields.io/badge/deployed-Render%20%C2%B7%20Vercel%20%C2%B7%20Supabase-0f766e?style=for-the-badge">
 </p>
 
 **Nova AI is an AI analyst for business data.** It connects to where a company's sales data lives
@@ -49,6 +50,17 @@ with its tests in [`tests/`](tests/).
 
 <p align="center"><img src="docs/assets/agents.svg" alt="Agent workflow" width="100%"></p>
 
+## Deployment and CI/CD
+
+Nova AI was deployed on managed cloud services and shipped through GitHub Actions.
+
+<p align="center"><img src="docs/assets/deployment.svg" alt="From commit to production: GitHub, GitHub Actions, Vercel, Render, Supabase" width="100%"></p>
+
+- **Frontend on Vercel:** every pull request is linted, type-checked and built, then gets its own preview URL posted on the pull request.
+- **Backend on Render:** on merge to `main`, the pipeline builds the Docker image, runs Alembic migrations and the tests, then deploys the FastAPI API with health checks.
+- **Database on Supabase:** managed PostgreSQL, reached through environment variables, never through credentials in code.
+- **Monitoring:** Sentry for errors, UptimeRobot for uptime.
+
 ## Tech stack
 
 | Layer | Technologies |
@@ -60,7 +72,8 @@ with its tests in [`tests/`](tests/).
 | **Frontend** | Next.js 16, React 19, TypeScript, Tailwind CSS, Radix UI, Recharts, React Flow, Framer Motion |
 | **Security** | Clerk (JWT), workspace isolation, webhook signature checks, secret-safe logging |
 | **Quality** | pytest (**1,700+ automated tests**), Playwright end-to-end tests, Ruff, Black, Mypy, load tests |
-| **Delivery** | Docker, GitHub Actions deploy workflows (Render, AWS, previews), Sentry |
+| **Hosting** | Render (FastAPI API in Docker), Vercel (Next.js frontend and pull-request previews), Supabase (managed PostgreSQL) |
+| **CI/CD** | GitHub, GitHub Actions (lint, type-check, build, migrations and tests before every deploy), Docker, Sentry, UptimeRobot |
 
 ## From idea to platform
 
@@ -89,16 +102,17 @@ nova-ai-showcase/
 ├── tests/test_verified_metric_sanitizer.py  Complete: real tests for the sanitizer
 ├── frontend/README.md                     Dashboard stack and screens
 ├── docs/
-│   ├── DESIGN_DECISIONS.md                The seven choices that shaped Nova AI
+│   ├── DESIGN_DECISIONS.md                The eight choices that shaped Nova AI
 │   └── BENCHMARK.md                       Ingestion benchmark and what made it fast
 └── tools/make_showcase_svgs.py            Generates the diagrams above
 ```
 
 ## Status
 
-Built and tested locally as a deployment-ready SaaS candidate: migrations, authentication,
-workers, connectors and the full test suite pass locally. A public production deployment is the
-next step. Connector status is reported per source: some are validated against live test
+Nova AI was deployed to the cloud: the API on Render, the dashboard on Vercel and the database on
+Supabase, released through GitHub Actions. Nova AI Analytics, the hardened generation, keeps the
+same deployment setup; its migrations, authentication, workers, connectors and full test suite
+pass locally. Connector status is reported per source: some are validated against live test
 accounts, others only through automated tests.
 
 ## Team

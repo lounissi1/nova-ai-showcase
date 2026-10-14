@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" width="1000" height="470" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">From commit to production</title>
+<desc id="d">GitHub Actions runs checks on every pull request and publishes a Vercel preview. On merge to main it builds the Docker image, runs Alembic migrations and tests, then deploys the API to Render. Production: Next.js on Vercel, FastAPI on Render, PostgreSQL on Supabase, monitored with Sentry and UptimeRobot.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6472"/></marker></defs>
+<rect x="0.5" y="0.5" width="999" height="469" rx="16" fill="#ffffff" stroke="#d9dee5"/>
+<text x="40.0" y="48.0" font-size="16" font-weight="700" fill="#1b1f2a" text-anchor="start">From commit to production</text>
+<rect x="40.0" y="110.0" width="140.0" height="130.0" rx="10" fill="#e6eaf0" stroke="#334155" stroke-width="1.5"/>
+<text x="110.0" y="172.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">GitHub</text>
+<text x="110.0" y="191.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">code · pull requests</text>
+<text x="290.0" y="80.0" font-size="12.5" font-weight="700" fill="#334155" text-anchor="start" letter-spacing="1.2">GITHUB ACTIONS CI/CD</text>
+<line x1="182.0" y1="147.0" x2="288.0" y2="124.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="236.0" y="127.5" font-size="12" font-weight="600" fill="#5b6472" text-anchor="middle">pull request</text>
+<rect x="290.0" y="92.0" width="270.0" height="64.0" rx="10" fill="#f6f7fb" stroke="#334155" stroke-width="1.5"/>
+<text x="425.0" y="121.0" font-size="14.5" font-weight="700" fill="#1b1f2a" text-anchor="middle">Checks</text>
+<text x="425.0" y="140.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">lint · type-check · build</text>
+<line x1="562.0" y1="124.0" x2="598.0" y2="124.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="600.0" y="92.0" width="360.0" height="64.0" rx="10" fill="#e3eafc" stroke="#2f5bd3" stroke-width="1.5"/>
+<text x="780.0" y="121.0" font-size="14.5" font-weight="700" fill="#1b1f2a" text-anchor="middle">Vercel preview</text>
+<text x="780.0" y="140.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">preview URL posted on the pull request</text>
+<line x1="182.0" y1="203.0" x2="288.0" y2="228.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="236.0" y="207.5" font-size="12" font-weight="600" fill="#5b6472" text-anchor="middle">merge to main</text>
+<rect x="290.0" y="196.0" width="270.0" height="64.0" rx="10" fill="#f6f7fb" stroke="#334155" stroke-width="1.5"/>
+<text x="425.0" y="225.0" font-size="14.5" font-weight="700" fill="#1b1f2a" text-anchor="middle">Checks and migrations</text>
+<text x="425.0" y="244.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">Docker build · Alembic migrations · tests</text>
+<line x1="562.0" y1="228.0" x2="598.0" y2="228.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="600.0" y="196.0" width="360.0" height="64.0" rx="10" fill="#e3eafc" stroke="#2f5bd3" stroke-width="1.5"/>
+<text x="780.0" y="225.0" font-size="14.5" font-weight="700" fill="#1b1f2a" text-anchor="middle">Deploy to Render</text>
+<text x="780.0" y="244.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">backend container, health-checked</text>
+<rect x="40.0" y="296.0" width="920.0" height="144.0" rx="14" fill="#f6f7fb" stroke="#d9dee5" stroke-width="1.5"/>
+<text x="60.0" y="322.0" font-size="12.5" font-weight="700" fill="#334155" text-anchor="start" letter-spacing="1.2">PRODUCTION</text>
+<text x="940.0" y="322.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="end">managed services, configured by environment variables, no secrets in code</text>
+<rect x="60.0" y="342.0" width="220.0" height="74.0" rx="10" fill="#e3eafc" stroke="#2f5bd3" stroke-width="1.5"/>
+<text x="170.0" y="376.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Vercel</text>
+<text x="170.0" y="395.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">Next.js frontend</text>
+<line x1="282.0" y1="379.0" x2="328.0" y2="379.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)" marker-start="url(#a)"/>
+<rect x="330.0" y="342.0" width="230.0" height="74.0" rx="10" fill="#e3eafc" stroke="#2f5bd3" stroke-width="1.5"/>
+<text x="445.0" y="376.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Render</text>
+<text x="445.0" y="395.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">FastAPI API in Docker</text>
+<line x1="562.0" y1="379.0" x2="608.0" y2="379.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)" marker-start="url(#a)"/>
+<rect x="610.0" y="342.0" width="160.0" height="74.0" rx="10" fill="#fdf0d5" stroke="#a15c07" stroke-width="1.5"/>
+<text x="690.0" y="376.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Supabase</text>
+<text x="690.0" y="395.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">PostgreSQL</text>
+<rect x="790.0" y="342.0" width="150.0" height="74.0" rx="10" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<text x="865.0" y="376.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Monitoring</text>
+<text x="865.0" y="395.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">Sentry · UptimeRobot</text>
+</svg>
