@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Nova AI architecture</title>
+<desc id="d">Sources feed an ingestion engine that writes to PostgreSQL. A FastAPI backend serves a Next.js dashboard and runs three engines: grounded Ask-AI, a LangGraph agent workflow and analytics. Celery workers handle background jobs; the LLM provider only narrates and never sees raw rows.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6472"/></marker></defs>
+<rect x="0.5" y="0.5" width="999" height="639" rx="16" fill="#ffffff" stroke="#d9dee5"/>
+<text x="32.0" y="44.0" font-size="13" font-weight="700" fill="#0f766e" text-anchor="start" letter-spacing="1.2">SOURCES</text>
+<rect x="32.0" y="58.0" width="170.0" height="34.0" rx="8" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="117.0" y="80.0" font-size="13" font-weight="600" fill="#1b1f2a" text-anchor="middle">CSV and CSV bundles</text>
+<rect x="32.0" y="102.0" width="170.0" height="34.0" rx="8" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="117.0" y="124.0" font-size="13" font-weight="600" fill="#1b1f2a" text-anchor="middle">PostgreSQL · MySQL</text>
+<rect x="32.0" y="146.0" width="170.0" height="34.0" rx="8" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="117.0" y="168.0" font-size="13" font-weight="600" fill="#1b1f2a" text-anchor="middle">MongoDB</text>
+<rect x="32.0" y="190.0" width="170.0" height="34.0" rx="8" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="117.0" y="212.0" font-size="13" font-weight="600" fill="#1b1f2a" text-anchor="middle">S3 / MinIO</text>
+<rect x="32.0" y="234.0" width="170.0" height="34.0" rx="8" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="117.0" y="256.0" font-size="13" font-weight="600" fill="#1b1f2a" text-anchor="middle">Stripe</text>
+<rect x="32.0" y="278.0" width="170.0" height="34.0" rx="8" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="117.0" y="300.0" font-size="13" font-weight="600" fill="#1b1f2a" text-anchor="middle">Shopify</text>
+<rect x="32.0" y="322.0" width="170.0" height="34.0" rx="8" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="117.0" y="344.0" font-size="13" font-weight="600" fill="#1b1f2a" text-anchor="middle">Snowflake</text>
+<rect x="330.0" y="34.0" width="330.0" height="66.0" rx="10" fill="#e3eafc" stroke="#2f5bd3" stroke-width="1.5"/>
+<text x="495.0" y="64.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Next.js dashboard</text>
+<text x="495.0" y="83.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">analytics · Ask AI · sources · agents · monitoring</text>
+<line x1="495.0" y1="100.0" x2="495.0" y2="132.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="505.0" y="122.0" font-size="12" font-weight="400" fill="#5b6472" text-anchor="start">HTTPS + WebSocket</text>
+<rect x="330.0" y="134.0" width="330.0" height="72.0" rx="10" fill="#e3eafc" stroke="#2f5bd3" stroke-width="1.5"/>
+<text x="495.0" y="167.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">FastAPI backend</text>
+<text x="495.0" y="186.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">Clerk JWT · workspace isolation · /api/v1</text>
+<rect x="250.0" y="262.0" width="160.0" height="92.0" rx="10" fill="#e3eafc" stroke="#2f5bd3" stroke-width="1.5"/>
+<text x="330.0" y="305.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Analytics</text>
+<text x="330.0" y="324.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">KPIs · forecasts</text>
+<rect x="420.0" y="262.0" width="160.0" height="92.0" rx="10" fill="#efe8fd" stroke="#6d3fd6" stroke-width="1.5"/>
+<text x="500.0" y="305.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Ask-AI</text>
+<text x="500.0" y="324.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">grounded answers</text>
+<rect x="590.0" y="262.0" width="160.0" height="92.0" rx="10" fill="#efe8fd" stroke="#6d3fd6" stroke-width="1.5"/>
+<text x="670.0" y="305.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Agent workflow</text>
+<text x="670.0" y="324.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">LangGraph</text>
+<line x1="495.0" y1="206.0" x2="330.0" y2="260.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="495.0" y1="206.0" x2="500.0" y2="260.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="495.0" y1="206.0" x2="670.0" y2="260.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="790.0" y="262.0" width="180.0" height="92.0" rx="10" fill="#ffffff" stroke="#6d3fd6" stroke-width="1.5"/>
+<text x="880.0" y="305.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">LLM provider</text>
+<text x="880.0" y="324.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">narration only, no raw rows</text>
+<line x1="752.0" y1="308.0" x2="788.0" y2="308.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M500,354 V380 H880 V356" fill="none" stroke="#6d3fd6" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a)"/>
+<rect x="250.0" y="404.0" width="500.0" height="66.0" rx="10" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="500.0" y="434.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Ingestion engine</text>
+<text x="500.0" y="453.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">connectors → staging COPY → quality gate → canonical records</text>
+<line x1="203" y1="75" x2="226" y2="75" stroke="#0f766e" stroke-width="1.4"/>
+<line x1="203" y1="119" x2="226" y2="119" stroke="#0f766e" stroke-width="1.4"/>
+<line x1="203" y1="163" x2="226" y2="163" stroke="#0f766e" stroke-width="1.4"/>
+<line x1="203" y1="207" x2="226" y2="207" stroke="#0f766e" stroke-width="1.4"/>
+<line x1="203" y1="251" x2="226" y2="251" stroke="#0f766e" stroke-width="1.4"/>
+<line x1="203" y1="295" x2="226" y2="295" stroke="#0f766e" stroke-width="1.4"/>
+<line x1="203" y1="339" x2="226" y2="339" stroke="#0f766e" stroke-width="1.4"/>
+<line x1="226" y1="75" x2="226" y2="339" stroke="#0f766e" stroke-width="1.4"/>
+<path d="M226,207 V437 H246" fill="none" stroke="#0f766e" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="790.0" y="404.0" width="180.0" height="66.0" rx="10" fill="#e6eaf0" stroke="#334155" stroke-width="1.5"/>
+<text x="880.0" y="434.0" font-size="15" font-weight="700" fill="#1b1f2a" text-anchor="middle">Celery workers</text>
+<text x="880.0" y="453.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">Redis queue</text>
+<line x1="752.0" y1="437.0" x2="788.0" y2="437.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)" marker-start="url(#a)"/>
+<rect x="250.0" y="500.0" width="720.0" height="112.0" rx="14" fill="#fdf0d5" stroke="#a15c07" stroke-width="1.5"/>
+<text x="268.0" y="524.0" font-size="12.5" font-weight="700" fill="#a15c07" text-anchor="start" letter-spacing="1.2">POSTGRESQL</text>
+<text x="952.0" y="524.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="end">read by analytics, Ask-AI and the agents</text>
+<rect x="268.0" y="538.0" width="214.0" height="56.0" rx="10" fill="#ffffff" stroke="#a15c07" stroke-width="1.5"/>
+<text x="375.0" y="563.0" font-size="14" font-weight="700" fill="#1b1f2a" text-anchor="middle">Canonical revenue</text>
+<text x="375.0" y="582.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">deduplicated records</text>
+<rect x="498.0" y="538.0" width="214.0" height="56.0" rx="10" fill="#ffffff" stroke="#a15c07" stroke-width="1.5"/>
+<text x="605.0" y="563.0" font-size="14" font-weight="700" fill="#1b1f2a" text-anchor="middle">Daily metrics</text>
+<text x="605.0" y="582.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">fast dashboards</text>
+<rect x="728.0" y="538.0" width="214.0" height="56.0" rx="10" fill="#ffffff" stroke="#a15c07" stroke-width="1.5"/>
+<text x="835.0" y="563.0" font-size="14" font-weight="700" fill="#1b1f2a" text-anchor="middle">Runs and audit</text>
+<text x="835.0" y="582.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">pipelines · agent logs</text>
+<line x1="500.0" y1="470.0" x2="500.0" y2="536.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="32.0" y="393.0" width="14.0" height="14.0" rx="3" fill="#e3eafc" stroke="#2f5bd3" stroke-width="1.5"/>
+<text x="52.0" y="405.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="start">app</text>
+<rect x="118.0" y="393.0" width="14.0" height="14.0" rx="3" fill="#efe8fd" stroke="#6d3fd6" stroke-width="1.5"/>
+<text x="138.0" y="405.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="start">AI</text>
+<rect x="32.0" y="417.0" width="14.0" height="14.0" rx="3" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="52.0" y="429.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="start">data</text>
+<rect x="118.0" y="417.0" width="14.0" height="14.0" rx="3" fill="#fdf0d5" stroke="#a15c07" stroke-width="1.5"/>
+<text x="138.0" y="429.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="start">storage</text>
+</svg>
